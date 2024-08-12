@@ -1,0 +1,23 @@
+type Query {
+    courses: [Course]
+    courseById(courseId: Int): Course
+
+}
+
+type Course {
+    id: ID
+    name: String
+    moduleCount: Int
+    lecturer: Lecturer
+    students: Students
+}
+
+type Lecturer {
+    id: ID
+    name: String
+}
+
+type Students {
+    id: ID
+    studentCount: Int
+}
